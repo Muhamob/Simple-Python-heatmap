@@ -6,7 +6,6 @@ import cv2
 start = 1
 duration = 10
 fps = '30'
-#videofile = "MOG21.mp4"
 cap = cv2.VideoCapture(0)
 outfile = 'heatmap.mp4'
 
@@ -55,8 +54,6 @@ while True:
     res_show = res_show.astype(np.uint8)
     res_show = cv2.applyColorMap(res_show, cv2.COLORMAP_JET)
     cv2.imshow('s', res_show)
-    fgmask = fgmask.astype(np.uint8)
-    # res_show = cv2.cvtColor(res_show, cv2.COLOR_BGR2RGB)
     # if sec < start: continue
 #    try:
 #        writer.writeFrame(res_show)
